@@ -1,0 +1,541 @@
+
+/* Embed fonts references for faster load */
+@font-face {
+	font-family: "Wunderpunkt";
+	font-weight: 300;
+	font-style: normal;
+	src: url(//chamberlaincoffee.com/cdn/shop/t/411/assets/Wunderpunkt-Light.woff2?v=128128884480347032881688055656) format("woff2"),url(//chamberlaincoffee.com/cdn/shop/t/411/assets/Wunderpunkt-Light.woff?v=81972527553041073651688055656) format("woff");
+}
+
+@font-face {
+	font-family:"Wunderpunkt";font-weight:400;font-style:normal;src:url(//chamberlaincoffee.com/cdn/shop/t/411/assets/Wunderpunkt-Regular.woff2?v=155034911556535715031688055656) format("woff2"),url(//chamberlaincoffee.com/cdn/shop/t/411/assets/Wunderpunkt-Regular.woff?v=48357058323165628521688055656) format("woff");
+}
+
+@font-face {
+	font-family:"Wunderpunkt";font-weight:600;font-style:normal;src:url(//chamberlaincoffee.com/cdn/shop/t/411/assets/Wunderpunkt-Bold.woff2?v=12349984320155104201688055656) format("woff2"),url(//chamberlaincoffee.com/cdn/shop/t/411/assets/Wunderpunkt-Bold.woff?v=143356298171322358651688055656) format("woff");
+}
+
+@font-face {
+	font-family:"KPSans";font-weight:300;font-style:normal;src:url(//chamberlaincoffee.com/cdn/shop/t/411/assets/KPSans-Light.woff2?v=172746885474117496691688055656) format("woff2"),url(//chamberlaincoffee.com/cdn/shop/t/411/assets/KPSans-Light.woff?v=157476961210326172031688055656) format("woff");
+}
+
+@font-face {
+	font-family:"KPSans";font-weight:400;font-style:normal;src:url(//chamberlaincoffee.com/cdn/shop/t/411/assets/KPSans-Regular.woff2?v=20376481631297112091688055656) format("woff2"),url(//chamberlaincoffee.com/cdn/shop/t/411/assets/KPSans-Regular.woff?v=67825147814779950481688055656) format("woff");
+}
+
+@font-face {
+	font-family:"KPSans";font-weight:500;font-style:normal;src:url(//chamberlaincoffee.com/cdn/shop/t/411/assets/KPSans-Medium.woff2?v=177592212900725744721688055656) format("woff2"),url(//chamberlaincoffee.com/cdn/shop/t/411/assets/KPSans-Medium.woff?v=165382914902020450081688055656) format("woff");
+}
+
+@font-face {
+	font-family:"KPSans";font-weight:600;font-style:normal;src:url(//chamberlaincoffee.com/cdn/shop/t/411/assets/KPSans-Bold.woff2?v=139436510588256189201688055656) format("woff2"),url(//chamberlaincoffee.com/cdn/shop/t/411/assets/KPSans-Bold.woff?v=136332996221558568301688055656) format("woff");
+}
+
+@font-face {
+	font-family:"KPSans";font-weight:700;font-style:normal;src:url(//chamberlaincoffee.com/cdn/shop/t/411/assets/KPSans-Black.woff2?v=64003595610433295041688055656) format("woff2"),url(//chamberlaincoffee.com/cdn/shop/t/411/assets/KPSans-Black.woff?v=106071143470626748411688055656) format("woff");
+}
+
+/* CSS variables */
+:root {
+  --icon-nav-link-active: url(//chamberlaincoffee.com/cdn/shop/t/411/assets/nav-link-active.svg?v=1296001957548541141688055656);
+	--icon-arrowhead-down-white: url(//chamberlaincoffee.com/cdn/shop/t/411/assets/arrowhead-down-white.svg?v=42037013351159065071688055656);
+	--icon-arrowhead-down: url(//chamberlaincoffee.com/cdn/shop/t/411/assets/arrowhead-down.svg?v=87449449720026348371688055656);
+	--icon-close: url(//chamberlaincoffee.com/cdn/shop/t/411/assets/icon-close.svg?v=162214576590110368281688055656);
+
+  --bg-yellow: #fab90a;
+  --bg-green: #0f7337;
+  --bg-lime: #9bc319;
+  --bg-oat: #E6E4DA;
+  --bg-black: #000;
+  --bg-grey: #242424;
+  --bg-red: #dc1e37;
+  --bg-marine: #004673;
+  --bg-turquoise: #a5d2eb;
+  --bg-pink: #f04b6e;
+  --bg-brown: #a1412b;
+  --bg-butterfly: #DC1E37;
+  --bg-orange: #F07D5F;
+  --bg-pumpkin: #6E0550;
+  --bg-hummingbird: #85A0C7;
+  --bg-otter: #1981c6;
+  --bg-bliss: #f88f17;
+  --bg-firstclass: #85171A;
+  --bg-tan: #dcbea5;
+  --bg-koala: #627cb3;
+  --bg-chocolate: #693F23;
+  --bg-peach: #FFBE9F;
+  --bg-sunshine: #FFC56E;
+  --bg-may-mystery: #b0d6b1;
+  --bg-blue-matcha: #0C4773;
+  --bg-strawberry: #F18372;
+  --bg-matcha-candle: #627247;
+}
+
+body{
+    background-color: var(--bg-oat);
+    margin: 0;
+    
+}
+
+.container header section{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    border-bottom: 2px solid rgb(179, 81, 81);
+    
+}
+.container header section .menu-bar .bars{
+    width: 20px;
+    color: #722c2c;
+    margin-left: 40px;
+    margin-top: 30px;
+    cursor: pointer;
+}
+.container header section .menu-bar .bars:hover{
+    opacity: 0.7;
+}
+.container header section .logo{
+    display: block;
+    margin: 0 auto;
+}
+.container header section .logo svg{
+    width: 100px;
+    cursor: pointer;
+    margin: 10px 0;
+}
+
+.container header{
+    margin-right: 0;
+}
+.container .main{
+    position: relative;
+    z-index: 0;
+}
+.container header .vertical{
+    background-color: var(--bg-oat);
+    z-index: 1;
+    position: fixed;
+}
+.container header .vertical .nav-bar{
+    max-width: 300px;
+    min-width: 300px;
+    height: 100vh;
+    border-right: 2px solid rgb(179, 81, 81);
+    
+}
+.container header .vertical .nav-bar ul{
+    list-style: none;
+    margin-top: 0;
+    padding-top: 25px;
+}
+.container header .vertical .nav-bar ul li{
+    margin-bottom: 16px;
+    animation: roll-in 1.5s ease;
+}
+@keyframes roll-in {
+  0% {
+    opacity: 0;
+    transform: translateX(-100%) ;
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0px);
+  }
+}
+.container header .vertical .nav-bar ul li:hover{
+    opacity: 0.7;
+}
+
+
+.container header .vertical .nav-bar ul li a{
+    font-family: 'Wunderpunkt';
+    text-decoration: none;
+    color: #722c2c;
+    font-size: 18px;
+    cursor: pointer;
+}
+.nav-bar.active{
+    display: block;
+}
+.nav-bar{
+    display: none;
+}
+
+
+/* main body */
+.container .main .title{
+    justify-content: center;
+}
+.container .main .title h1{
+    font-family: 'Wunderpunkt';
+    color: #722c2c;
+    text-align: center;
+    margin-top: 50px;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+.container .main .title i{
+    rotate: 10deg;
+}
+.container .main .img{
+    text-align:center;
+    margin-top: 30px;
+}
+.container .main .img img {
+    width: 300px;
+    background: rgb(179, 81, 81);
+    border-radius: 20px;
+}
+
+
+
+
+.container .main .text p{
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
+    font-family: 'Wunderpunkt';
+    color:rgb(179, 81, 81);
+    font-size: 20px;
+    width: 300px;
+    text-align: center;
+}
+.container .main .button{
+    text-align: center;
+    margin-top: 25px;
+}
+.container .main .buy-btn{
+    font-family: 'Wunderpunkt';
+    border: none;
+    font-size: 20px;
+    background:#722c2c;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 50px;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.tags{
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+}
+.tags .text-box{
+    background-color: white;
+    min-width: 70px;
+    min-height: 70px;
+    max-width: 70px;
+    max-height: 70px;
+    margin-left: 10px;
+    margin-right: 10px;
+    border-radius: 100px;
+    border: 2px solid rgb(179, 81, 81);
+}
+.tags .labels{
+    width: 50px;
+    margin-left: auto;
+    margin-right: auto;
+    font-weight: 600;
+    font-size: 12px;
+    text-align: center;
+    color:rgb(179, 81, 81);
+}
+.tags .labels span{
+    font-size: 10px;
+    font-weight: 400;
+}
+.tags .text-box #one{
+    margin-top: 27px;
+}
+.tags .text-box #two{
+    margin-top: 19px;
+    
+}
+.tags #three{
+    margin-top:19px;
+    margin-left: 7px;
+}
+.tags #four{
+
+}
+
+.middle-section{
+    text-align: center;
+    margin-top: 70px;
+}
+.middle-section .created{
+    font-size: 20px;
+    font-weight: 600;
+    font-family: 'Wunderpunkt';
+    color:#722c2c;
+}
+.middle-section .explanation{
+    font-size: 28px;
+    font-weight: 300;
+    font-family: 'Wunderpunkt';
+    margin: 0 50px;
+    color:#722c2c;
+}
+
+.stats{
+    display: grid;
+    text-align:center;
+    justify-content: center;
+    margin-top: 50px;
+}
+.stats div{
+    margin: 0 40px;
+}
+.stats .roasted{
+    display: flex;
+    margin: 0 auto;
+}
+.stats .roasted img{
+    width: 30px;
+    height: 30px;
+    margin-top: 10px;
+    margin-right: 10px;
+}
+.stats p {
+    font-family: 'Wunderpunkt';
+}
+.stats .review{
+    display: flex;
+    margin: 0 auto;
+}
+.stats .review a{
+    text-decoration: none;
+    color: black;
+}
+.stats .review .stars{
+    margin-right: 10px;
+    margin-left: 10px;
+}
+.stats .review img{
+    width: 20px;
+    height: 25px;
+    margin-top: 12px;
+}
+.stats .organic{
+    display: flex;
+    margin: 0 auto;
+}
+.stats .organic img{
+    width: 25px;
+    height: 25px;
+    margin-top: 12px;
+    margin-right: 10px;
+}
+
+
+
+.container .main .second-section .img-two{
+    display: grid;
+    grid-template-columns: 1fr;
+    background:white;
+    width: 350px;
+    margin-top: 50px;
+    padding: 25px 0;
+    border-radius: 50px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.container .main .second-section .img-two img{
+    width: 300px;
+    display: block;
+    margin: 0 auto;
+    border-radius: 20px;
+}
+.container .main .second-section .img-two .two{
+    width: 200px;
+    margin: 40px auto;
+
+    animation-name: floating;
+    animation-duration: 2.5s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+    
+}
+
+@keyframes floating {
+    from { transform: translate(0,  0px); }
+    60%  { transform: translate(0, 12px); }
+    to   { transform: translate(0, -0px); }    
+}
+.container .main .second-section .img-two .two:hover{
+    opacity:.7;
+}
+
+.container .main .cr p{
+    font-family: 'KPSans';
+    font-size: 14px;
+    text-align:center;
+    color:#722c2c;
+    margin: 50px 0;
+    margin-top: 100px;
+}
+
+@media screen and (min-width: 560px){
+    .tags{
+        display: flex;
+        justify-content: center;
+        margin-top: 40px;
+    }
+    .tags .text-box{
+        background-color: white;
+        min-width: 80px;
+        min-height: 80px;
+        max-width: 80px;
+        max-height: 80px;
+        margin-left: 25px;
+        margin-right: 25px;
+        border-radius: 100px;
+        border: 2px solid rgb(179, 81, 81);
+    }
+    .tags .labels{
+        width: 60px;
+        margin-left: auto;
+        margin-right: auto;
+        font-weight: 600;
+        font-size: 14px;
+        text-align: center;
+        color:rgb(179, 81, 81);
+    }
+    .tags .labels span{
+        font-size: 12px;
+        font-weight: 400;
+    }
+    .tags .text-box #one{
+        margin-top: 30px;
+    }
+    .tags .text-box #two{
+        margin-top: 22px;
+        
+    }
+    .tags #three{
+        margin-top:22px;
+        margin-left: 7px;
+    }
+   
+}
+
+@media screen and (min-width: 803px){
+    .container .main .img img {
+        width: 350px;
+    }
+    .container .main .first-section{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+    .container .main .img img {
+       
+        margin-left: 100px;
+    }
+    .container .main .text p{
+        margin-left: 50px;
+        margin-right: auto;
+        margin-top: 65px;
+        font-family: 'Wunderpunkt';
+        color:rgb(179, 81, 81);
+        font-size: 24px;
+        width: 350px;
+        text-align: left;
+    }
+    .container .main .button{
+        text-align: left;
+        margin-top: 20px;
+        margin-left: 50px;
+    }
+   
+
+    .tags .text-box{
+        background-color: white;
+        min-width: 80px;
+        min-height: 80px;
+        max-width: 80px;
+        max-height: 80px;
+        margin-left: 50px;
+        margin-right: 50px;
+        border-radius: 100px;
+        border: 2px solid rgb(179, 81, 81);
+    }
+
+    .middle-section .created{
+        font-size: 20px;
+        font-weight: 600;
+        font-family: 'Wunderpunkt';
+        color:#722c2c;
+    }
+    .middle-section .explanation{
+        font-size: 36px;
+        font-weight: 300;
+        font-family: 'Wunderpunkt';
+        margin: 20px 50px;
+        color:#722c2c;
+    }
+
+    .stats{
+        display: flex;
+        justify-content: center;
+        margin-top: 50px;
+        max-width: 1000px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .stats div{
+        margin: 0 40px;
+    }
+    .stats .roasted{
+        display: flex;
+    }
+    .stats .roasted img{
+        width: 30px;
+        height: 30px;
+        margin-top: 10px;
+        margin-right: 10px;
+    }
+    .stats p {
+        font-family: 'Wunderpunkt';
+    }
+    .stats .review{
+        display: flex;
+    }
+    .stats .review a{
+        text-decoration: none;
+        color: black;
+    }
+    .stats .review .stars{
+        margin-right: 10px;
+        margin-left: 10px;
+    }
+    .stats .review img{
+        width: 20px;
+        height: 25px;
+        margin-top: 12px;
+    }
+    .stats .organic{
+        display: flex;
+    }
+    .stats .organic img{
+        width: 25px;
+        height: 25px;
+        margin-top: 12px;
+        margin-right: 10px;
+    }
+    
+    
+}
+@media screen and (min-width: 950px){
+.container .main .second-section .img-two{
+    display: grid;
+    grid-template-columns: 2fr 1fr 2fr;
+    margin-top: 50px;
+    padding-top: 35px;
+    padding-bottom: 20px;
+    border-radius: 50px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 90%;
+    max-width: 1000px;
+}
+}
